@@ -1,0 +1,125 @@
+aid: tonic-ai
+url: https://raw.githubusercontent.com/api-evangelist/tonic-ai/refs/heads/main/apis.yml
+name: Tonic.ai
+kind: company
+description: >-
+  Tonic.ai builds developer-data products for de-identifying, subsetting, and
+  synthesizing data for AI and software teams. The portfolio includes Tonic
+  Structural (structured/semi-structured data), Tonic Textual (unstructured
+  free-text and files), Tonic Validate (RAG evaluation), and Tonic Fabricate
+  (relational synthetic data and mock APIs). Each product ships its own REST
+  API and SDKs.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Synthetic Data
+  - De-Identification
+  - Privacy
+  - Unstructured Data
+  - RAG Evaluation
+  - REST
+  - SDK
+  - Developer Tools
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: tonic-ai:structural-api
+    name: Tonic Structural REST API
+    description: >-
+      REST API for Tonic Structural - de-identify, subset, and synthesize
+      structured and semi-structured data. Authentication via API token in the
+      Authorization header (Authorization Apikey <token>). API tokens are
+      created from User Settings and do not expire. All requests are versioned.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.tonic.ai/app/api/api-documentation
+    baseURL: https://app.tonic.ai
+    tags:
+      - REST
+      - Structural
+      - Synthetic Data
+      - De-Identification
+    properties:
+      - type: Documentation
+        url: https://docs.tonic.ai/app/api/api-documentation
+      - type: APIReference
+        url: https://app.tonic.ai/apidocs/index.html
+      - type: GetToken
+        url: https://docs.tonic.ai/app/api/tonic-api-get-token
+      - type: Examples
+        url: https://docs.tonic.ai/app/api/api-examples
+  - aid: tonic-ai:textual-api
+    name: Tonic Textual REST API
+    description: >-
+      REST API for Tonic Textual - de-identify, redact, and synthesize
+      unstructured data, free-text, and files. Authentication via API key in
+      the Authorization header. Backed by a Python SDK (tonic-textual).
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.tonic.ai/textual
+    baseURL: https://textual.tonic.ai/api
+    tags:
+      - REST
+      - Textual
+      - Unstructured
+      - Redaction
+    properties:
+      - type: Documentation
+        url: https://docs.tonic.ai/textual/textual-rest-api/rest-api-authentication
+      - type: SDK
+        title: Python (tonic-textual)
+        url: https://tonic-textual-sdk.readthedocs-hosted.com/en/latest/index.html
+  - aid: tonic-ai:validate
+    name: Tonic Validate
+    description: >-
+      Tonic Validate is an open-source RAG evaluation framework and metrics
+      platform for measuring retrieval-augmented generation quality. Used via a
+      Python SDK that reports runs to the Tonic Validate web UI.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.tonic.ai/products/validate
+    baseURL: https://validate.tonic.ai
+    tags:
+      - RAG
+      - Evaluation
+      - Metrics
+      - SDK
+      - Python
+    properties:
+      - type: ProductPage
+        url: https://www.tonic.ai/products/validate
+      - type: SourceCode
+        url: https://github.com/TonicAI/tonic_validate
+  - aid: tonic-ai:fabricate
+    name: Tonic Fabricate
+    description: >-
+      Tonic Fabricate generates synthetic relational data, free-text, and
+      mockable APIs from a schema definition. Used through the Fabricate web
+      app and project APIs.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.tonic.ai/products/fabricate
+    baseURL: https://fabricate.tonic.ai
+    tags:
+      - Synthetic Data
+      - Relational
+      - Mock API
+    properties:
+      - type: ProductPage
+        url: https://www.tonic.ai/products/fabricate
+      - type: Documentation
+        url: https://docs.tonic.ai/fabricate
+common:
+  - type: Website
+    url: https://www.tonic.ai/
+  - type: Documentation
+    url: https://docs.tonic.ai/
+  - type: GitHub
+    url: https://github.com/TonicAI
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/tonicfakedata
+  - type: Plans
+    url: plans/tonic-ai-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/tonic-ai-rate-limits.yml
+  - type: FinOps
+    url: finops/tonic-ai-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
