@@ -120,6 +120,8 @@ common:
     url: rate-limits/tonic-ai-rate-limits.yml
   - type: FinOps
     url: finops/tonic-ai-finops.yml
+  - type: LLMsTxt
+    url: https://docs.tonic.ai/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
