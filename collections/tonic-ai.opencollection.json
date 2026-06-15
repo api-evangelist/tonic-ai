@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tonic Structural REST API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workspaces",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List workspaces",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tonicHost}/api/workspace",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              }
+            ]
+          },
+          "docs": "List workspaces"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Generate Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Start a data generation job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tonicHost}/api/generateData/start",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "strictMode",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Start a data generation job"
+        },
+        {
+          "info": {
+            "name": "Get data generation job status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tonicHost}/api/generateData",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get data generation job status"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Table Relationships",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get table relationships for a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tonicHost}/api/table/relationships",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "useSchemaCache",
+                "value": "",
+                "type": "query",
+                "description": "When true, returns cached schema relationships."
+              }
+            ]
+          },
+          "docs": "Get table relationships for a workspace"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
