@@ -9,7 +9,7 @@ description: >-
   free-text and files), Tonic Validate (RAG evaluation), and Tonic Fabricate
   (relational synthetic data and mock APIs). Each product ships its own REST
   API and SDKs.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Synthetic Data
   - De-Identification
@@ -30,7 +30,7 @@ apis:
       structured and semi-structured data. Authentication via API token in the
       Authorization header (Authorization Apikey <token>). API tokens are
       created from User Settings and do not expire. All requests are versioned.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.tonic.ai/app/api/api-documentation
     baseURL: https://app.tonic.ai
     tags:
@@ -53,7 +53,7 @@ apis:
       REST API for Tonic Textual - de-identify, redact, and synthesize
       unstructured data, free-text, and files. Authentication via API key in
       the Authorization header. Backed by a Python SDK (tonic-textual).
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.tonic.ai/textual
     baseURL: https://textual.tonic.ai/api
     tags:
@@ -73,7 +73,7 @@ apis:
       Tonic Validate is an open-source RAG evaluation framework and metrics
       platform for measuring retrieval-augmented generation quality. Used via a
       Python SDK that reports runs to the Tonic Validate web UI.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.tonic.ai/products/validate
     baseURL: https://validate.tonic.ai
     tags:
@@ -93,7 +93,7 @@ apis:
       Tonic Fabricate generates synthetic relational data, free-text, and
       mockable APIs from a schema definition. Used through the Fabricate web
       app and project APIs.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.tonic.ai/products/fabricate
     baseURL: https://fabricate.tonic.ai
     tags:
