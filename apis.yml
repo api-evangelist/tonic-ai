@@ -64,7 +64,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.tonic.ai/textual/textual-rest-api/rest-api-authentication
-      - type: SDK
+      - type: SDKs
         title: Python (tonic-textual)
         url: https://tonic-textual-sdk.readthedocs-hosted.com/en/latest/index.html
   - aid: tonic-ai:validate
@@ -120,7 +120,7 @@ common:
     url: rate-limits/tonic-ai-rate-limits.yml
   - type: FinOps
     url: finops/tonic-ai-finops.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.tonic.ai/llms.txt
 maintainers:
   - FN: Kin Lane
