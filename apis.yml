@@ -106,6 +106,10 @@ apis:
       - type: Documentation
         url: https://docs.tonic.ai/fabricate
 common:
+  - type: DomainSecurity
+    url: security/tonic-ai-domain-security.yml
+  - type: Authentication
+    url: authentication/tonic-ai-authentication.yml
   - type: Website
     url: https://www.tonic.ai/
   - type: Documentation

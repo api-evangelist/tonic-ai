@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/tonic-ai-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: apiKeyAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: 'Tonic API key. Send as `Authorization: Apikey <token>`.'
+  sources:
+  - openapi/tonic-ai-openapi.yml
