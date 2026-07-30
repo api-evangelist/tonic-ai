@@ -9,7 +9,20 @@ description: >-
   free-text and files), Tonic Validate (RAG evaluation), and Tonic Fabricate
   (relational synthetic data and mock APIs). Each product ships its own REST
   API and SDKs.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tonic-ai.png
 tags:
   - Synthetic Data
   - De-Identification
@@ -23,88 +36,114 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.19'
 apis:
-  - aid: tonic-ai:structural-api
-    name: Tonic Structural REST API
-    description: >-
-      REST API for Tonic Structural - de-identify, subset, and synthesize
-      structured and semi-structured data. Authentication via API token in the
-      Authorization header (Authorization Apikey <token>). API tokens are
-      created from User Settings and do not expire. All requests are versioned.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.tonic.ai/app/api/api-documentation
-    baseURL: https://app.tonic.ai
-    tags:
-      - REST
-      - Structural
-      - Synthetic Data
-      - De-Identification
-    properties:
-      - type: Documentation
-        url: https://docs.tonic.ai/app/api/api-documentation
-      - type: APIReference
-        url: https://app.tonic.ai/apidocs/index.html
-      - type: GetToken
-        url: https://docs.tonic.ai/app/api/tonic-api-get-token
-      - type: Examples
-        url: https://docs.tonic.ai/app/api/api-examples
-  - aid: tonic-ai:textual-api
-    name: Tonic Textual REST API
-    description: >-
-      REST API for Tonic Textual - de-identify, redact, and synthesize
-      unstructured data, free-text, and files. Authentication via API key in
-      the Authorization header. Backed by a Python SDK (tonic-textual).
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.tonic.ai/textual
-    baseURL: https://textual.tonic.ai/api
-    tags:
-      - REST
-      - Textual
-      - Unstructured
-      - Redaction
-    properties:
-      - type: Documentation
-        url: https://docs.tonic.ai/textual/textual-rest-api/rest-api-authentication
-      - type: SDKs
-        title: Python (tonic-textual)
-        url: https://tonic-textual-sdk.readthedocs-hosted.com/en/latest/index.html
-  - aid: tonic-ai:validate
-    name: Tonic Validate
-    description: >-
-      Tonic Validate is an open-source RAG evaluation framework and metrics
-      platform for measuring retrieval-augmented generation quality. Used via a
-      Python SDK that reports runs to the Tonic Validate web UI.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.tonic.ai/products/validate
-    baseURL: https://validate.tonic.ai
-    tags:
-      - RAG
-      - Evaluation
-      - Metrics
-      - SDK
-      - Python
-    properties:
-      - type: ProductPage
-        url: https://www.tonic.ai/products/validate
-      - type: SourceCode
-        url: https://github.com/TonicAI/tonic_validate
-  - aid: tonic-ai:fabricate
-    name: Tonic Fabricate
-    description: >-
-      Tonic Fabricate generates synthetic relational data, free-text, and
-      mockable APIs from a schema definition. Used through the Fabricate web
-      app and project APIs.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.tonic.ai/products/fabricate
-    baseURL: https://fabricate.tonic.ai
-    tags:
-      - Synthetic Data
-      - Relational
-      - Mock API
-    properties:
-      - type: ProductPage
-        url: https://www.tonic.ai/products/fabricate
-      - type: Documentation
-        url: https://docs.tonic.ai/fabricate
+- aid: tonic-ai:structural-api
+  name: Tonic Structural REST API
+  description: >-
+    REST API for Tonic Structural - de-identify, subset, and synthesize structured and semi-structured
+    data. Authentication via API token in the Authorization header (Authorization Apikey <token>). API
+    tokens are created from User Settings and do not expire. All requests are versioned.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.tonic.ai/app/api/api-documentation
+  baseURL: https://app.tonic.ai
+  tags:
+  - REST
+  - Structural
+  - Synthetic Data
+  - De-Identification
+  properties:
+  - type: Documentation
+    url: https://docs.tonic.ai/app/api/api-documentation
+  - type: APIReference
+    url: https://app.tonic.ai/apidocs/index.html
+  - type: GetToken
+    url: https://docs.tonic.ai/app/api/tonic-api-get-token
+  - type: Examples
+    url: https://docs.tonic.ai/app/api/api-examples
+- aid: tonic-ai:textual-api
+  name: Tonic Textual REST API
+  description: >-
+    REST API for Tonic Textual - de-identify, redact, and synthesize unstructured data, free-text, and
+    files. Authentication via API key in the Authorization header. Backed by a Python SDK (tonic-textual).
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.tonic.ai/textual
+  baseURL: https://textual.tonic.ai/api
+  tags:
+  - REST
+  - Textual
+  - Unstructured
+  - Redaction
+  properties:
+  - type: Documentation
+    url: https://docs.tonic.ai/textual/textual-rest-api/rest-api-authentication
+  - type: SDKs
+    title: Python (tonic-textual)
+    url: https://tonic-textual-sdk.readthedocs-hosted.com/en/latest/index.html
+- aid: tonic-ai:validate
+  name: Tonic Validate
+  description: >-
+    Tonic Validate is an open-source RAG evaluation framework and metrics platform for measuring retrieval-augmented
+    generation quality. Used via a Python SDK that reports runs to the Tonic Validate web UI.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tonic.ai/products/validate
+  baseURL: https://validate.tonic.ai
+  tags:
+  - RAG
+  - Evaluation
+  - Metrics
+  - SDK
+  - Python
+  properties:
+  - type: ProductPage
+    url: https://www.tonic.ai/products/validate
+  - type: SourceCode
+    url: https://github.com/TonicAI/tonic_validate
+- aid: tonic-ai:fabricate
+  name: Tonic Fabricate
+  description: >-
+    Tonic Fabricate generates synthetic relational data, free-text, and mockable APIs from a schema definition.
+    Used through the Fabricate web app and project APIs.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tonic.ai/products/fabricate
+  baseURL: https://fabricate.tonic.ai
+  tags:
+  - Synthetic Data
+  - Relational
+  - Mock API
+  properties:
+  - type: ProductPage
+    url: https://www.tonic.ai/products/fabricate
+  - type: Documentation
+    url: https://docs.tonic.ai/fabricate
+- aid: tonic-ai:tonic-ai-generate-data-api
+  name: Tonic.ai Generate Data API
+  description: The Generate Data API from Tonic.ai — 2 operation(s) for generate data.
+  humanURL: https://docs.tonic.ai/app/api/api-documentation
+  baseURL: https://app.tonic.ai
+  tags:
+  - Generate Data
+  properties:
+  - type: OpenAPI
+    url: openapi/tonic-ai-generate-data-api-openapi.yml
+- aid: tonic-ai:tonic-ai-table-relationships-api
+  name: Tonic.ai Table Relationships API
+  description: The Table Relationships API from Tonic.ai — 1 operation(s) for table relationships.
+  humanURL: https://docs.tonic.ai/app/api/api-documentation
+  baseURL: https://app.tonic.ai
+  tags:
+  - Table Relationships
+  properties:
+  - type: OpenAPI
+    url: openapi/tonic-ai-table-relationships-api-openapi.yml
+- aid: tonic-ai:tonic-ai-workspaces-api
+  name: Tonic.ai Workspaces API
+  description: The Workspaces API from Tonic.ai — 1 operation(s) for workspaces.
+  humanURL: https://docs.tonic.ai/app/api/api-documentation
+  baseURL: https://app.tonic.ai
+  tags:
+  - Workspaces
+  properties:
+  - type: OpenAPI
+    url: openapi/tonic-ai-workspaces-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/tonic-ai-agentic-access.yml
