@@ -1,0 +1,18 @@
+{
+  "provider": "tonic-ai",
+  "sources": [
+    "tonic-ai-generate-data-api-openapi.yml",
+    "tonic-ai-table-relationships-api-openapi.yml",
+    "tonic-ai-workspaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "tonic-ai-generate-data-api-openapi.yml",
+    "tonic-ai-table-relationships-api-openapi.yml",
+    "tonic-ai-workspaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

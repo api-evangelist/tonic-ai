@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: Tonic Structural REST API
+  version: "1.0"
+  description: |
+    REST API for Tonic Structural, the de-identification, subsetting,
+    and synthetic data product from Tonic.ai. The API surface exposes
+    workspaces, generation jobs, and table relationship management.
+
+    Authentication uses an API key passed via the `Authorization` header
+    in the form `Authorization: Apikey <token>`. API tokens are created
+    from User Settings and do not expire.
+
+    Sources:
+    - https://docs.tonic.ai/app/api/api-documentation
+    - https://docs.tonic.ai/app/api/api-examples
+    - Per-instance Swagger at /apidocs/index.html on each Tonic host.
+  contact:
+    name: Tonic.ai
+    url: https://docs.tonic.ai/app/api/api-documentation
+servers:
+  - url: https://{tonicHost}
+    description: Your Tonic Structural instance
+    variables:
+      tonicHost:
+        default: app.tonic.ai
+        description: Hostname of your Tonic Structural deployment.
+security:
+  - apiKeyAuth: []
+tags:
+  - name: Workspaces
+  - name: Generate Data
+  - name: Table Relationships
+paths:
+  /api/workspace:
+    get:
+      tags: [Workspaces]
+      summary: List workspaces
+      operationId: listWorkspaces
+      parameters:
+        - $ref: "#/components/parameters/ApiVersion"
+      responses:
+        "200":
+          description: Array of workspaces accessible to the caller.
+  /api/generateData/start:
+    post:
+      tags: [Generate Data]
+      summary: Start a data generation job
+      operationId: startGenerateData
+      parameters:
+        - $ref: "#/components/parameters/ApiVersion"
+        - in: query
+          name: workspaceId
+          required: true
+          schema: { type: string }
+        - in: query
+          name: strictMode
+          schema:
+            type: string
+            description: Optional strict mode (for example `RejectOnAllSchemaItems`).
+      responses:
+        "200":
+          description: Job started.
+  /api/generateData:
+    get:
+      tags: [Generate Data]
+      summary: Get data generation job status
+      operationId: getGenerateDataStatus
+      parameters:
+        - $ref: "#/components/parameters/ApiVersion"
+        - in: query
+          name: workspaceId
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Current job status for the workspace.
+  /api/table/relationships:
+    get:
+      tags: [Table Relationships]
+      summary: Get table relationships for a workspace
+      operationId: getTableRelationships
+      parameters:
+        - $ref: "#/components/parameters/ApiVersion"
+        - in: query
+          name: workspaceId
+          required: true
+          schema: { type: string }
+        - in: query
+          name: useSchemaCache
+          schema: { type: boolean }
+          description: When true, returns cached schema relationships.
+      responses:
+        "200":
+          description: Table relationship metadata for the workspace.
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        Tonic API key. Send as `Authorization: Apikey <token>`.
+  parameters:
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema: { type: string }
+      description: |
+        Tonic API version (for example `v2023.07.0`). Required on every
+        request unless a default version is configured.
