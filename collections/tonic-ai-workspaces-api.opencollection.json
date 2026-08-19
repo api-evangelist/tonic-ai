@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tonic Structural REST Generate Data Workspaces API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workspaces",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List workspaces",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tonicHost}/api/workspace",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              }
+            ]
+          },
+          "docs": "List workspaces"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

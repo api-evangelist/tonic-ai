@@ -1,0 +1,173 @@
+{
+  "item": [
+    {
+      "id": "4d6f2a28-c409-41fb-bf63-cb7e1ffcbe66",
+      "name": "Table Relationships",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0772ba4b-2c0a-402b-81cf-e54a6c568d5b",
+          "name": "Get table relationships for a workspace",
+          "request": {
+            "name": "Get table relationships for a workspace",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "table",
+                "relationships"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "workspaceId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "useSchemaCache",
+                  "value": "<boolean>",
+                  "description": "When true, returns cached schema relationships."
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of your Tonic Structural deployment.",
+                  "type": "any",
+                  "value": "{{tonicHost}}",
+                  "key": "tonicHost"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8d6a19c-ea15-43ab-b6d0-3a9f33d02274",
+              "name": "Table relationship metadata for the workspace.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "table",
+                    "relationships"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspaceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useSchemaCache",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of your Tonic Structural deployment.",
+                      "type": "any",
+                      "value": "{{tonicHost}}",
+                      "key": "tonicHost"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of your Tonic Structural deployment.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "app.tonic.ai",
+      "key": "tonicHost"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tonicHost}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c46b24e2-070c-48ff-863d-6088c8dbb3d2",
+    "name": "Tonic Structural REST Generate Data Table Relationships API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Tonic Structural, the de-identification, subsetting,\nand synthetic data product from Tonic.ai. The API surface exposes\nworkspaces, generation jobs, and table relationship management.\n\nAuthentication uses an API key passed via the `Authorization` header\nin the form `Authorization: Apikey <token>`. API tokens are created\nfrom User Settings and do not expire.\n\nSources:\n- https://docs.tonic.ai/app/api/api-documentation\n- https://docs.tonic.ai/app/api/api-examples\n- Per-instance Swagger at /apidocs/index.html on each Tonic host.\n\n\nContact Support:\n Name: Tonic.ai",
+      "type": "text/plain"
+    }
+  }
+}

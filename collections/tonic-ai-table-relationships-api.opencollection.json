@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tonic Structural REST Generate Data Table Relationships API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Table Relationships",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get table relationships for a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tonicHost}/api/table/relationships",
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query",
+                "description": "Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "useSchemaCache",
+                "value": "",
+                "type": "query",
+                "description": "When true, returns cached schema relationships."
+              }
+            ]
+          },
+          "docs": "Get table relationships for a workspace"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

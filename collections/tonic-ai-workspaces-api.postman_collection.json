@@ -1,0 +1,151 @@
+{
+  "item": [
+    {
+      "id": "970751ee-d31b-4dc2-b76b-4274c2ab9984",
+      "name": "Workspaces",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5bc3a3cc-9add-43d1-bf8f-cf7223cb4186",
+          "name": "List workspaces",
+          "request": {
+            "name": "List workspaces",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "workspace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of your Tonic Structural deployment.",
+                  "type": "any",
+                  "value": "{{tonicHost}}",
+                  "key": "tonicHost"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c2fe569-67ae-4e89-862d-99df5765d3dc",
+              "name": "Array of workspaces accessible to the caller.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "workspace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of your Tonic Structural deployment.",
+                      "type": "any",
+                      "value": "{{tonicHost}}",
+                      "key": "tonicHost"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of your Tonic Structural deployment.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "app.tonic.ai",
+      "key": "tonicHost"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tonicHost}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6ad6c3a8-fd5f-4401-a19f-e187fca41f38",
+    "name": "Tonic Structural REST Generate Data Workspaces API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Tonic Structural, the de-identification, subsetting,\nand synthetic data product from Tonic.ai. The API surface exposes\nworkspaces, generation jobs, and table relationship management.\n\nAuthentication uses an API key passed via the `Authorization` header\nin the form `Authorization: Apikey <token>`. API tokens are created\nfrom User Settings and do not expire.\n\nSources:\n- https://docs.tonic.ai/app/api/api-documentation\n- https://docs.tonic.ai/app/api/api-examples\n- Per-instance Swagger at /apidocs/index.html on each Tonic host.\n\n\nContact Support:\n Name: Tonic.ai",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "item": [
+    {
+      "id": "7686934f-f4b1-43f4-ac4a-10f560eab36b",
+      "name": "Generate Data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8bf04552-d920-46ca-8e7a-09c0ea01ac8c",
+          "name": "Start a data generation job",
+          "request": {
+            "name": "Start a data generation job",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "generateData",
+                "start"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "workspaceId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "strictMode",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of your Tonic Structural deployment.",
+                  "type": "any",
+                  "value": "{{tonicHost}}",
+                  "key": "tonicHost"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4959e42-47ee-415b-bb42-433f73010c7e",
+              "name": "Job started.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "generateData",
+                    "start"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspaceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "strictMode",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of your Tonic Structural deployment.",
+                      "type": "any",
+                      "value": "{{tonicHost}}",
+                      "key": "tonicHost"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f73e2463-4fcd-41d6-a174-6f84cbc3a17f",
+          "name": "Get data generation job status",
+          "request": {
+            "name": "Get data generation job status",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "generateData"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>",
+                  "description": "(Required) Tonic API version (for example `v2023.07.0`). Required on every\nrequest unless a default version is configured.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "workspaceId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of your Tonic Structural deployment.",
+                  "type": "any",
+                  "value": "{{tonicHost}}",
+                  "key": "tonicHost"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ba14b4b5-455d-4ee0-abb6-fb97817adcb3",
+              "name": "Current job status for the workspace.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "generateData"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspaceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of your Tonic Structural deployment.",
+                      "type": "any",
+                      "value": "{{tonicHost}}",
+                      "key": "tonicHost"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of your Tonic Structural deployment.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "app.tonic.ai",
+      "key": "tonicHost"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tonicHost}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0a045d45-1903-4500-b41a-cb4a30d897b2",
+    "name": "Tonic Structural REST Generate Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Tonic Structural, the de-identification, subsetting,\nand synthetic data product from Tonic.ai. The API surface exposes\nworkspaces, generation jobs, and table relationship management.\n\nAuthentication uses an API key passed via the `Authorization` header\nin the form `Authorization: Apikey <token>`. API tokens are created\nfrom User Settings and do not expire.\n\nSources:\n- https://docs.tonic.ai/app/api/api-documentation\n- https://docs.tonic.ai/app/api/api-examples\n- Per-instance Swagger at /apidocs/index.html on each Tonic host.\n\n\nContact Support:\n Name: Tonic.ai",
+      "type": "text/plain"
+    }
+  }
+}
