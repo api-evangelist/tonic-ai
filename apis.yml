@@ -155,6 +155,8 @@ apis:
   humanURL: https://docs.tonic.ai/app/api/api-documentation
   baseURL: https://app.tonic.ai
   tags:
+  - Workspace
+  tags_raw:
   - Workspaces
   properties:
   - type: OpenAPI
