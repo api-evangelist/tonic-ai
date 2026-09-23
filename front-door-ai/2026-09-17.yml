@@ -1,0 +1,36 @@
+# Front Door AI Index — tonic-ai — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: tonic-ai
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.tonic.ai
+  final_host: www.tonic.ai
+  ownership: own
+  owner: tonic-ai
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 62
+  host_score: 62
+  density: 13.21
+  words: 4692
+  tiers:
+    agentic: 15
+    core: 46
+    model: 1
+  ambiguous: 9
+  top_terms:
+    AI: 41
+    agent: 6
+    fine-tune: 5
+    LLMs: 3
+    RAG: 3
+    agentic: 3
+    AI agent: 2
+    Claude: 1
+    artificial intelligence: 1
+    automation: 1
+    chatbot: 1
+    generative ai: 1
