@@ -1,0 +1,44 @@
+generated: '2026-09-25'
+method: probed
+source: https://fabricate.tonic.ai/api/v1/mcp
+status: gated
+server:
+  name: tonic-ai
+  transport: http
+  url: https://fabricate.tonic.ai/api/v1/mcp
+deployment:
+  mode: remote
+  endpoint: https://fabricate.tonic.ai/api/v1/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-09-25'
+  source: 'docs-check 2026-09-25 (first-party, on the provider''s own domain: named in https://docs.tonic.ai/fabricate/fabricate-api/using-the-fabricate-mcp-server.md
+    (linked from llms.txt); probed with JSON-RPC initialize; roadmap#590 #721)'
+  probe_why: RFC 9728 challenge; metadata fetched (resource https://fabricate.tonic.ai/api/v1/mcp)
+  found_via: named in https://docs.tonic.ai/fabricate/fabricate-api/using-the-fabricate-mcp-server.md
+    (linked from llms.txt)
+tools_note: No tool list captured. This manifest records a PROBED, reachable endpoint only; anonymous
+  tools/list was auth-gated or the server requires an initialize handshake this reachability probe does
+  not perform. Run signals/audit_mcp_authorship.py --probe to enumerate tools and settle platform-vs-provider
+  authorship. Do NOT derive a tool list from the OpenAPI and store it here -- that is a candidate manifest,
+  and it belongs under an X-MCPServerCandidate pointer.
+rfc9728:
+  endpoint: https://fabricate.tonic.ai/api/v1/mcp
+  metadata_url: https://fabricate.tonic.ai/.well-known/oauth-protected-resource
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://fabricate.tonic.ai/api/v1/mcp
+    authorization_servers:
+    - https://fabricate.tonic.ai
+    scopes_supported:
+    - fabricate:mcp:read
+    - fabricate:mcp:project:edit
+    - fabricate:mcp:project:create
+    - fabricate:mcp:project:delete
+    - fabricate:mcp:workspace:create
+    - fabricate:mcp:workspace:delete
+    bearer_methods_supported:
+    - header
