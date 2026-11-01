@@ -1,4 +1,4 @@
-# Tonic.ai (tonic-ai)
+# Tonic.ai
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,124 +66,131 @@
 
 Tonic.ai builds developer-data products for de-identifying, subsetting, and synthesizing data for AI and software teams. The portfolio includes Tonic Structural (structured/semi-structured data), Tonic Textual (unstructured free-text and files), Tonic Validate (RAG evaluation), and Tonic Fabricate (relational synthetic data and mock APIs). Each product ships its own REST API and SDKs.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/tonic-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/tonic-ai/refs/heads/main/apis.yml)
+**Areas:** Synthetic Data · De-Identification · Privacy · Unstructured Data · RAG Evaluation · REST · SDK · Developer Tools
 
-## Tags
+## Tonic.ai on APIs.io
 
-- Synthetic Data
-- De-Identification
-- Privacy
-- Unstructured Data
-- RAG Evaluation
-- REST
-- SDK
-- Developer Tools
+Everything profiled for Tonic.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tonic-ai/](https://apis.io/providers/tonic-ai/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (7)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [Tonic Structural REST API](https://apis.io/apis/tonic-ai/structural-api/) — REST API for Tonic Structural - de-identify, subset, and synthesize structured and semi-structured data. Authentication via API token in the Authorization…
+- [Tonic Textual REST API](https://apis.io/apis/tonic-ai/textual-api/) — REST API for Tonic Textual - de-identify, redact, and synthesize unstructured data, free-text, and files. Authentication via API key in the Authorization…
+- [Tonic Validate](https://apis.io/apis/tonic-ai/validate/) — Tonic Validate is an open-source RAG evaluation framework and metrics platform for measuring retrieval-augmented generation quality. Used via a Python SDK…
+- [Tonic Fabricate](https://apis.io/apis/tonic-ai/fabricate/) — Tonic Fabricate generates synthetic relational data, free-text, and mockable APIs from a schema definition. Used through the Fabricate web app and project APIs.
+- [Tonic.ai Generate Data API](https://apis.io/apis/tonic-ai/tonic-ai-generate-data-api/) — The Generate Data API from Tonic.ai — 2 operation(s) for generate data.
+- [Tonic.ai Table Relationships API](https://apis.io/apis/tonic-ai/tonic-ai-table-relationships-api/) — The Table Relationships API from Tonic.ai — 1 operation(s) for table relationships.
+- [Tonic.ai Workspaces API](https://apis.io/apis/tonic-ai/tonic-ai-workspaces-api/) — The Workspaces API from Tonic.ai — 1 operation(s) for workspaces.
 
-## APIs
+### Published properties
 
-### Tonic Structural REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for Tonic Structural - de-identify, subset, and synthesize structured and semi-structured data. Authentication via API token in the Authorization header (Authorization Apikey <token>). API tokens are created from User Settings and do not expire. All requests are versioned.
+#### MCP servers (1)
 
-- **Human URL:** [https://docs.tonic.ai/app/api/api-documentation](https://docs.tonic.ai/app/api/api-documentation)
-- **Base URL:** `https://app.tonic.ai`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [Moved to /providers/tonic-ai/](https://apis.io/servers/tonic-ai/tonic-ai/)
 
-- REST
-- Structural
-- Synthetic Data
-- De-Identification
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.tonic.ai/app/api/api-documentation)
-- [API Reference](https://app.tonic.ai/apidocs/index.html)
-- [Get Token](https://docs.tonic.ai/app/api/tonic-api-get-token)
-- [Examples](https://docs.tonic.ai/app/api/api-examples)
-- [Postman Collection](collections/tonic-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/tonic-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Tonic Ai Agentic Access](https://apis.io/agentic-access/tonic-ai/tonic-ai-agentic-access/)
 
-### Tonic Textual REST API
+#### Collections (4)
 
-REST API for Tonic Textual - de-identify, redact, and synthesize unstructured data, free-text, and files. Authentication via API key in the Authorization header. Backed by a Python SDK (tonic-textual).
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://docs.tonic.ai/textual](https://docs.tonic.ai/textual)
-- **Base URL:** `https://textual.tonic.ai/api`
+- [Tonic Structural REST API](https://apis.io/collections/tonic-ai/open-tonic-ai/)
+- [Tonic Structural REST Generate Data API](https://apis.io/collections/tonic-ai/open-tonic-ai-generate-data-api/)
+- [Tonic Structural REST Generate Data Table Relationships API](https://apis.io/collections/tonic-ai/open-tonic-ai-table-relationships-api/)
+- [Tonic Structural REST Generate Data Workspaces API](https://apis.io/collections/tonic-ai/open-tonic-ai-workspaces-api/)
 
-#### Tags
+#### Security (2)
 
-- REST
-- Textual
-- Unstructured
-- Redaction
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Tonic Ai Authentication](https://apis.io/security/tonic-ai/tonic-ai-authentication/)
+- [Tonic Ai Domain Security](https://apis.io/security/tonic-ai/tonic-ai-domain-security/)
 
-- [Documentation](https://docs.tonic.ai/textual/textual-rest-api/rest-api-authentication)
-- [SDK](https://tonic-textual-sdk.readthedocs-hosted.com/en/latest/index.html)
-- [Postman Collection](collections/tonic-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/tonic-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Tonic Validate
+Published plans, tiers and prices.
 
-Tonic Validate is an open-source RAG evaluation framework and metrics platform for measuring retrieval-augmented generation quality. Used via a Python SDK that reports runs to the Tonic Validate web UI.
+- [Tonic Ai Plans Pricing](https://apis.io/plans/tonic-ai/tonic-ai-plans-pricing/)
 
-- **Human URL:** [https://www.tonic.ai/products/validate](https://www.tonic.ai/products/validate)
-- **Base URL:** `https://validate.tonic.ai`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- RAG
-- Evaluation
-- Metrics
-- SDK
-- Python
+- [Tonic Ai Rate Limits](https://apis.io/rate-limits/tonic-ai/tonic-ai-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Product Page](https://www.tonic.ai/products/validate)
-- [Source Code](https://github.com/TonicAI/tonic_validate)
-- [Postman Collection](collections/tonic-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/tonic-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Tonic Fabricate
+- [Tonic Ai Finops](https://apis.io/finops/tonic-ai/tonic-ai-finops/)
 
-Tonic Fabricate generates synthetic relational data, free-text, and mockable APIs from a schema definition. Used through the Fabricate web app and project APIs.
+## Where to find this API
 
-- **Human URL:** [https://www.tonic.ai/products/fabricate](https://www.tonic.ai/products/fabricate)
-- **Base URL:** `https://fabricate.tonic.ai`
-
-#### Tags
-
-- Synthetic Data
-- Relational
-- Mock API
-
-#### Properties
-
-- [Product Page](https://www.tonic.ai/products/fabricate)
-- [Documentation](https://docs.tonic.ai/fabricate)
-- [Postman Collection](collections/tonic-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/tonic-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.tonic.ai/)
 - [Documentation](https://docs.tonic.ai/)
-- [Git Hub](https://github.com/TonicAI)
-- [LinkedIn](https://www.linkedin.com/company/tonicfakedata)
-- [Plans](plans/tonic-ai-plans-pricing.yml)
-- [Rate Limits](rate-limits/tonic-ai-rate-limits.yml)
-- [Fin Ops](finops/tonic-ai-finops.yml)
-- [L L Ms Txt](https://docs.tonic.ai/llms.txt)
+- [Blog](https://www.tonic.ai/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.2** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 45.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 5.3 |
+
+**Agent readiness 32.8** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tonic-ai/](https://apis.io/providers/tonic-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tonic.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tonic-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
